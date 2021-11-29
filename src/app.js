@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 hbs.registerPartials(__dirname + "/views/partials")
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'hbs')
-
+    
 
 // To use req.body (Para poder acceder a los datos de los formularios que mis usuarios utilicen)
 app.use(express.urlencoded({ extended: true }))
