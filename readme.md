@@ -6,6 +6,7 @@ c.login
 d.usuario: edit/delete
 e.profile
 f.privado, vista detallada
+g.about
 
 2. models/seeds.js: usuario y cuál otro modelo?
 a. imagen
