@@ -2,7 +2,7 @@
 
 const express = require('express')
 const app = express()
-
+const hbs = require("hbs")
 require('dotenv/config')
 
 const path = require('path')
@@ -12,7 +12,7 @@ const path = require('path')
 // 2. Middlewares ( Static files - HTML CSS JS IMAGES )
 
 app.use(express.static(path.join(__dirname, 'public')))
-
+hbs.registerPartials(__dirname + "/views/partials")
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'hbs')
 
