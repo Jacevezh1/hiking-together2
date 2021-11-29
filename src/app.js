@@ -32,12 +32,10 @@ app.use(express.urlencoded({ extended: true }))
 // a) Home
 app.use('/', require('./routes'))
 
+// b) Login y signup
+app.use('/auth', require('./routes/auth.router'))
 
 
 // 5. Export
 
 module.exports = app
-
-
-
-
