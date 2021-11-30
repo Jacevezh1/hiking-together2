@@ -4,19 +4,19 @@
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
     <h6><a href="/auth/signup" class="link-danger">Or SignUp</a></h6>
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label class="label-form" for="floatingInput">Email address</label>
+      <input name="email" type="email" class="form-control"  placeholder="name@example.com">
+      <label  class="label-form" for="email">Email address</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      <label class="label-form" for="floatingPassword">Password</label>
+      <input name="password" type="password" class="form-control" placeholder="Password">
+      <label class="label-form" for="password">Password</label>
     </div>
 
     <button id="button-login" class="w-100 btn btn-lg btn-danger" type="submit">Sign in</button>
     <p class="mt-5 mb-3 text-muted">© 2021–2021</p>
-     {{#if msg}}
-            <p class="text-red-400"> {{msg}} </p>
-     {{/if}}
+    {{#if msg}}
+    <p class="text-red-400"> {{msg}} </p>
+    {{/if}}
   </form>
 </main>
 
