@@ -33,7 +33,7 @@ exports.postSignup = async (req, res) => {
    
     if(!name, !email, !password){
         return res.render('auth/signup', {
-            msg: 'All fields required.'
+            msg: 'Todos los campos necesarios.'
         })
     }
 
@@ -61,22 +61,16 @@ exports.postSignup = async (req, res) => {
             name,
             email,
             password: hashedPassword,
-            imgUrl
+            
         })
 
 
+        console.log(createdUser)
+
         
-
-        // Crear session del usuario (Pendiente archivo config, session)
-        req.session.currentUser = {
-            _id: createdUser._id,
-            name: createdUser.name,
-            email: createdUser.email,
-            imgUrl: createdUser.imgUrl
-        }
-
+    
         // Redirection, una vez creado el usuario que me redirija a la vista de usuario en particular
-        res.redirect(`auth/login`)
+        res.redirect('login')
 
 
     // Renderizar errores en su caso
@@ -115,17 +109,24 @@ exports.postLogin = async(req, res) => {
 
     const { email, password } = req.body
 
+    
+    console.log({email})
+   
+
     // 2. Buscar usuario en la base de datos 
     try{
         // Se busca el usuario creado en DB, y se guarda en una variable
-        const findUser = await User.findOne({email})
+        const findUser = await User.findOne({ email })
 
         // Si no se encuentra el usuario en DB, renderiza usuario no encontrado
         if(!findUser) {
             return res.render('auth/login', {
-                msg: 'User not Found'
+                msg: 'User not Found, ayuda'
             })
+            
         }
+
+        console.log(findUser)
 
         // Check Password en DB - nos regresa un booleano, y se guarda en una varibale, (Se utiliza bcryptjs para password encriptado)
         const checkedPassword = await bcryptjs.compareSync(password, findUser.password)
@@ -137,16 +138,12 @@ exports.postLogin = async(req, res) => {
             })
         }
 
-        // Maneja el tema de la session del usuario (PENDIENTE HACER)
-        req.session.currentUser = {
-            _id: findUser._id,
-            name: findUser.name,
-            email: findUser.email,
-            imgUrl: findUser.imgUrl
-        }
+       
 
         // Redirect, una vez encontrado, manda al usuario a su pagina personalizada ya loggeado
+        /* res.redirect('profile') */
         res.redirect(`/user/${findUser.name}`)
+
 
     } catch(e){
         console.log(e)

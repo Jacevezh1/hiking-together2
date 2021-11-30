@@ -6,22 +6,25 @@
     <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
     <h6><a href="/auth/login" class="link-danger">Or Login</a></h6>
     <div class="form-floating">
-      <input type="text" class="form-control" id="floatingInput" placeholder="rolo21">
-      <label class="label-form" for="floatingInput">Email address</label>
+      <input name="email" type="email" class="form-control"  placeholder="Rolo@gmail.com">
+      <label class="label-form" for="email">Email address</label>
     </div>
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label class="label-form" for="floatingInput">Username</label>
+      <input name="name" type="name" class="form-control"  placeholder="rolo21">
+      <label class="label-form" for="name">Username</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      <label class="label-form" for="floatingPassword">Password</label>
+      <input name="password" type="password" class="form-control"  placeholder="Password">
+      <label class="label-form" for="password">Password</label> 
     </div>
 
     <button id="button-login" class="w-100 btn btn-lg btn-danger" type="submit">Sign Up</button>
     <p class="mt-5 mb-3 text-muted">© 2021–2021</p>
+    
     {{#if msg}}
     <p class="text-red-400"> {{msg}} </p>
     {{/if}}
   </form>
 </main>
+
+
