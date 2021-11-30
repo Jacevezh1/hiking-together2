@@ -5,7 +5,7 @@ const { Schema, model } = require('mongoose')
 
 // 2. Schema
 
-const usuarioSchema = new Schema({
+const userSchema = new Schema({
 
     name: {
         type: String,
@@ -23,17 +23,13 @@ const usuarioSchema = new Schema({
         type: String,
         required: [true, 'Password is required.']
     },
-    imgUrl: String,
-
-
-
+   
 }, {timestamps: true})
 
 
 // 3. Model
 
-
-const User = model('User', usuarioSchema)
+const User = model('User', userSchema)
 
 
 

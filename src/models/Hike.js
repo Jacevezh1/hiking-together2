@@ -1,19 +1,36 @@
-// 1. Import - Modelo de hike 
+// Import - Modelo de hikes card
 
-
-
-
-// 2. Schema
-
-
-
-
-
-// 3. Model
+const { Schema, model } = require('mongoose')
 
 
 
 
 
-// 4. Export
+// Schema
+const hikesSchema = new Schema({
+    nickname: {
+        type: String
+    },
+    description: {
+        type: String
+    },
+    imageUrl: {
+        type: String
+    },
+    time: String,
+    location: String
+}, {timestamps: true})
+
+
+// Model
+const Hike = model('Hike', hikesSchema)
+
+
+// Export
+module.exports = hikesSchema
+
+
+
+
+
 

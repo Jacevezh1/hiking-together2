@@ -6,10 +6,9 @@ const { getProfile } = require('./../controllers/user.controller')
 
 // 2. Routes
 
-router.get('/profile', getProfile)
+
+router.get('/:user', getProfile)
 
 // 3. Export
 
 module.exports = router
-
-
