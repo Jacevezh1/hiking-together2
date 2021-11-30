@@ -67,7 +67,13 @@ exports.postSignup = async (req, res) => {
 
         console.log(createdUser)
 
-        
+        // Create session
+        req.session.currentUser = {
+            _id: createdUser._id,
+            name: createdUser.name,
+            email: createdUser.email,
+            imgUrl: createdUser.imgUrl
+        }        
     
         // Redirection, una vez creado el usuario que me redirija a la vista de usuario en particular
         res.redirect('login')
@@ -138,7 +144,11 @@ exports.postLogin = async(req, res) => {
             })
         }
 
-       
+        req.session.currentUser = {
+            _id: findUser._id,
+            name: findUser.name,
+            email: findUser.email,
+        }
 
         // Redirect, una vez encontrado, manda al usuario a su pagina personalizada ya loggeado
         /* res.redirect('profile') */
@@ -150,4 +160,13 @@ exports.postLogin = async(req, res) => {
     }
 }
 
+
+
+
+
+// Function Logout
+exports.postLogout = async(req, res) => {
+    res.clearCookie('session-token')
+    req.session.destroy(err => err ? console.log(e) : res.redirect('/auth/login'))
+}
 
