@@ -70,3 +70,10 @@
 
 }
 
+.index img {
+  object-fit: none; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  min-width: 50%;
+  max-height: 250px;
+  margin-bottom: 1rem;
+}
