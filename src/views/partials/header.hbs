@@ -10,8 +10,10 @@
 
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
         <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-        <li><a href="/users/profile" class="nav-link px-2 text-white">Mi perfil</a></li>
+        <li><a href="/about" class="nav-link px-2 text-white">About</a></li>
+        <li><a href="/hikes" class="nav-link px-2 text-white">Hikes</a></li>
+        <li><a href="/user/{{currentUser.name}}" class="nav-link px-2 text-white">Mi perfil</a></li>
+        <li><a href="/hikes/crear" class="nav-link px-2 text-white">Crear Hike</a></li>
         <form style="color: brown;" action="/auth/logout" method="POST">
         <button type="submit" class="btn btn-primary">Log Out</button>
       </form>
@@ -34,7 +36,7 @@
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
               <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
               <li><a href="/about" class="nav-link px-2 text-white">About</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+              <li><a href="/comments" class="nav-link px-2 text-white">Comments</a></li>
 
             </ul>
 

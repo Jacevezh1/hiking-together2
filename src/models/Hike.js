@@ -8,9 +8,8 @@ const { Schema, model } = require('mongoose')
 
 // Schema
 const hikesSchema = new Schema({
-    nickname: {
-        type: String
-    },
+    
+    creator: String,
     description: {
         type: String
     },

@@ -3,13 +3,13 @@
 const express = require('express')
 const app = express()
 const hbs = require("hbs")
-
+const sessionM = require("./config/session")
 require('dotenv/config')
 
 const connectDB = require('./db')
 
 const path = require('path')
-
+sessionM(app)
 
 
 // 2. Middlewares ( Static files - HTML CSS JS IMAGES )
