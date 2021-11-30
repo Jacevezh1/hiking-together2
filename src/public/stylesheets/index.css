@@ -14,6 +14,17 @@
 }
 
 
+
+.sectionA {
+  height: 100%;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 #signup-title {
   text-align: center;
 }
@@ -69,6 +80,32 @@
   color: black;
 
 }
+
+
+
+.carousel {
+
+  margin-bottom: 4rem;
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  line-height: var(--bs-body-line-height);
+  color: #5a5a5a;
+  box-sizing: border-box;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    box-sizing: border-box;
+}
+
+
+
 
 .index img {
   object-fit: none; /* Do not scale the image */
