@@ -1,47 +1,22 @@
-
-<div class="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-  <div class="sm:mx-auto sm:w-full sm:max-w-md">
-    <img class="mx-auto h-12 w-auto" src="https://o.remove.bg/downloads/0abd7ced-c337-43b5-b602-67d0c4fe2b61/png-transparent-man-walking-signage-bidezidor-kirol-logo-pictogram-symbol-sign-hiking-icon-miscellaneous-angle-hand-removebg-preview.png" alt="Workflow">
-    <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-      Sign in to your account
-    </h2>
-    <p class="mt-2 text-center text-sm text-gray-600">
-        Or
-        <a href="/auth/signup" class="font-medium text-blue-600 hover:text-blue-500">
-          Sign up
-        </a>
-    </p>
-  </div>
-
-  <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-    <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-      <form class="space-y-6" action="/auth/login" method="POST">
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700">
-            Email address
-          </label>
-          <div class="mt-1">
-            <input id="email" name="email" type="email" autocomplete="email" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-          </div>
-        </div>
-        <div>
-          <label for="password" class="block text-sm font-medium text-gray-700">
-            Password
-          </label>
-          <div class="mt-1">
-            <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-          </div>
-        </div>
-        <div>
-          <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-            Sign in
-          </button>
-        </div>
-        {{#if msg}}
-            <p class="text-red-400"> {{msg}} </p>
-        {{/if}}
-      </form>
+<main class="form-signin">
+  <form id="sign-form" action="/auth/login" method="post">
+    <img id="image-login" class="mb-4" src="https://o.remove.bg/downloads/c5fed2d0-e111-42e2-b7d8-4bb53a870152/adventure-travel-area-climbing-silhouette-backpacking-removebg-preview.png" alt="" width="170" height="120">
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <h6><a href="/auth/signup" class="link-danger">Or SignUp</a></h6>
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label class="label-form" for="floatingInput">Email address</label>
     </div>
-  </div>
-</div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label class="label-form" for="floatingPassword">Password</label>
+    </div>
+
+    <button id="button-login" class="w-100 btn btn-lg btn-danger" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">© 2021–2021</p>
+     {{#if msg}}
+            <p class="text-red-400"> {{msg}} </p>
+     {{/if}}
+  </form>
+</main>
 
