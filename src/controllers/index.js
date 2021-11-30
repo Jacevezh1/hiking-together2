@@ -1,8 +1,7 @@
-const home = (req, res) => {
+exports.home = (req, res) => {
     res.render('index')
 }
 
-
-module.exports = home
-
-
+exports.about =  (req,res) => {
+    res.render('about')
+}
