@@ -30,9 +30,6 @@ connectDB()
 // 3. Layout Middleware (Importante para saber si un usrio esta loggeado y checar en las vistas)
 
 
-
-
-
 // 4. Routes
 
 // a) Home
