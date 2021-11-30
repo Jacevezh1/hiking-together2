@@ -1,78 +1,27 @@
-
- 
-<div class="min-h-full flex" style="height: calc(100vh - 64px);">
-  <div class="flex-1 flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
-    <div class="mx-auto w-full max-w-sm lg:w-96">
-      <div class="flex flex-col justify-center items-center">
-        <img class="h-20 w-auto" src="https://o.remove.bg/downloads/0abd7ced-c337-43b5-b602-67d0c4fe2b61/png-transparent-man-walking-signage-bidezidor-kirol-logo-pictogram-symbol-sign-hiking-icon-miscellaneous-angle-hand-removebg-preview.png" alt="Workflow">
-        <h2 class="mt-6 text-3xl font-extrabold text-gray-900">
-          Register
-        </h2>
-        <p class="mt-2 text-sm text-gray-600">
-          Or
-          <a href="/auth/login" class="font-medium text-indigo-600 hover:text-indigo-500">
-            Login
-          </a>
-        </p>
-      </div>
-
-      <div class="mt-8">
-        <div>
-          <div class="mt-6 relative">
-            <div class="absolute inset-0 flex items-center" aria-hidden="true">
-              <div class="w-full border-t border-gray-300"></div>
-            </div>
-            <div class="relative flex justify-center text-sm">
-              <span class="px-2 bg-white text-gray-500">
-                Or continue with
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-6">
-          <form action="/auth/signup" method="POST" class="space-y-6">
-            <div>
-              <label for="name" class="block text-sm font-medium text-gray-700">
-                Name
-              </label>
-              <div class="mt-1">
-                <input id="name" name="name" type="text" autocomplete="name" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-              </div>
-            </div>
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-700">
-                Email address
-              </label>
-              <div class="mt-1">
-                <input id="email" name="email" type="email" autocomplete="email" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-              </div>
-            </div>
-
-            <div class="space-y-1">
-              <label for="password" class="block text-sm font-medium text-gray-700">
-                Password
-              </label>
-              <div class="mt-1">
-                <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-              </div>
-            </div>
-
-            <div>
-              <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                Sign up
-              </button>
-            </div>
-            {{#if msg}}
-            <p class="text-red-400"> {{msg}} </p>
-            {{/if}}
-          </form>
-        </div>
-      </div>
+<main class="form-signin">
+  <form id="sign-form" action="/auth/signup" method="post">
+    <img id="image-login" class="mb-4"
+      src="https://o.remove.bg/downloads/c5fed2d0-e111-42e2-b7d8-4bb53a870152/adventure-travel-area-climbing-silhouette-backpacking-removebg-preview.png"
+      alt="" width="170" height="120">
+    <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+    <h6><a href="/auth/login" class="link-danger">Or Login</a></h6>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingInput" placeholder="rolo21">
+      <label class="label-form" for="floatingInput">Email address</label>
     </div>
-  </div>
-  <div class="hidden lg:block relative w-0 flex-1">
-    <img class="absolute inset-0 h-full w-full object-cover" src="https://images.pexels.com/photos/287240/pexels-photo-287240.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-  </div>
-</div>
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label class="label-form" for="floatingInput">Username</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label class="label-form" for="floatingPassword">Password</label>
+    </div>
 
+    <button id="button-login" class="w-100 btn btn-lg btn-danger" type="submit">Sign Up</button>
+    <p class="mt-5 mb-3 text-muted">© 2021–2021</p>
+    {{#if msg}}
+    <p class="text-red-400"> {{msg}} </p>
+    {{/if}}
+  </form>
+</main>
