@@ -31,7 +31,7 @@ exports.postSignup = async (req, res) => {
 
     // Validacion para verificar que el usuario adjunte todos los campos necesarios
    
-    if(!name, !email, !password, !img, !description){
+    if(!name, !email, !password){
         return res.render('auth/signup', {
             msg: 'All fields required.'
         })
@@ -64,6 +64,9 @@ exports.postSignup = async (req, res) => {
             imgUrl
         })
 
+
+        
+
         // Crear session del usuario (Pendiente archivo config, session)
         req.session.currentUser = {
             _id: createdUser._id,
@@ -73,7 +76,7 @@ exports.postSignup = async (req, res) => {
         }
 
         // Redirection, una vez creado el usuario que me redirija a la vista de usuario en particular
-        res.redirect(`/user/${createdUser.name}`)
+        res.redirect(`auth/login`)
 
 
     // Renderizar errores en su caso

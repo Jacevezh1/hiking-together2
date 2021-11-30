@@ -23,10 +23,6 @@ const usuarioSchema = new Schema({
         type: String,
         required: [true, 'Password is required.']
     },
-    description: {
-        type: String,
-        
-    },
     imgUrl: String,
 
 
@@ -44,3 +40,5 @@ const User = model('User', usuarioSchema)
 // 4. Export
 
 module.exports = User
+
+
