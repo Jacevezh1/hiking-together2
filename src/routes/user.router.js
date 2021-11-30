@@ -6,7 +6,7 @@ const { getProfile } = require('./../controllers/user.controller')
 
 // 2. Routes
 
-router.get('/:user', getProfile)
+router.get('/profile', getProfile)
 
 // 3. Export
 

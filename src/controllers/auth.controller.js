@@ -31,7 +31,7 @@ exports.postSignup = async (req, res) => {
 
     // Validacion para verificar que el usuario adjunte todos los campos necesarios
    
-    if(!name, !email, !password){
+    if(!name || !email || !password){
         return res.render('auth/signup', {
             msg: 'All fields required.'
         })
