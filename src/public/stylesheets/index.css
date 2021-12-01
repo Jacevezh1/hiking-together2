@@ -205,3 +205,137 @@
   color: rgb(187, 93, 93);
   text-align: center;
 }
+
+
+
+.py-5 {
+  padding-top: 3rem!important;
+  padding-bottom: 3rem!important;
+}
+
+.px-4 {
+  padding-right: 1.5rem!important;
+  padding-left: 1.5rem!important;
+}
+
+
+/* @media (min-width: 576px)
+.container, .container-sm {
+    max-width: 540px;
+}
+ */
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  width: 100%;
+ 
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+::after, ::before {
+  box-sizing: border-box;
+}
+
+
+
+
+
+#about-cover-first {
+
+  background-image:url(/images/about1.jpeg);
+  background-position: center center;
+  background-size: cover;
+  border-radius: 1rem;
+
+}
+
+
+#about-cover-middle {
+
+
+  background-image:url(/images/about2.jpeg);
+  background-position: center center;
+  background-size: cover;
+  border-radius: 1rem;
+  
+
+
+}
+
+
+#about-cover {
+
+  background-image:url(/images/about3.jpeg);
+  background-position: center center;
+  background-size: cover;
+  border-radius: 1rem;
+
+
+}
+
+
+
+.about-text-hiking{
+
+  margin-top: 2rem;
+  color: rgb(161, 113, 80);
+  text-align: center;
+}
+
+
+.title-about-hiking{
+
+  color: rgb(224, 136, 36);
+  text-align: center;
+}
+
+
+#text-img-about1 {
+
+  color: rgb(224, 136, 36);
+  text-align: center;
+}
+
+
+#text-img-about2 {
+
+  color: rgb(224, 136, 36);
+  text-align: center;
+}
+
+
+#text-img-about3 {
+
+  color: rgb(224, 136, 36);
+  text-align: center;
+}
+
+
+#text-title-images {
+
+  text-align: center;
+  color: rgb(158, 9, 9);
+
+}
+
+
+#first-title-about {
+
+  text-align: center;
+  color: rgb(158, 9, 9);
+
+}
+
+
+
+
+#home-page-features {
+
+  align-items: center;
+  text-align: center;
+  margin: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+
+}
