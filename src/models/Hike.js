@@ -14,7 +14,7 @@ const hikeSchema = new Schema({
     },
     location: String,
     time: String
-})
+}, {timestamps: true})
 
 
 
