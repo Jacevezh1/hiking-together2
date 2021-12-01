@@ -1,0 +1,24 @@
+
+<h1>Single Hike</h1>
+
+<div class="card mb-3">
+ {{#with data}}
+  <img src="{{this.imageUrl}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 id="time-location-single" class="card-title">{{this.location}}</h5>
+    <p id="time-description-single" class="card-text">{{this.description}}</p>
+    <p id="time-hike-single" class="card-text"><small class="text-muted">{{this.time}}</small></p>
+  </div>
+  <div class="card-footer">
+    <small class="text-muted"><a href="/hikes" class="card-link">Go Back</a></small>
+  </div>
+  {{/with}}
+  {{#if owner}}
+  <a href="/hikes/edit"> Editar </a>
+  {{/if}}
+</div>
+
+
+
+
+

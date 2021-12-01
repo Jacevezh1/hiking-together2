@@ -9,28 +9,27 @@ const {
     postLogin,
     postLogout
 
-    
 } = require('./../controllers/auth.controller') 
 
-const { isLoggedIn, isLoggedOut } = require('./../middlewares')
+
 
 // 2. Routes
 
 // a. Signup
 
-router.get('/signup', isLoggedOut, getSignup)
+router.get('/signup', getSignup)
 router.post('/signup', postSignup)
 
 
 // b. Login
 
-router.get('/login', isLoggedOut, getLogin)
+router.get('/login', getLogin)
 router.post('/login', postLogin)
 
 
 
 // c. Logout
-router.post('/logout', isLoggedIn, postLogout)
+router.post('/logout', postLogout)
 
 
 

@@ -1,14 +1,9 @@
-// Import - Modelo de hikes card
-
+// Import - Modelo de rooms
 const { Schema, model } = require('mongoose')
 
-
-
-
-
 // Schema
-const hikesSchema = new Schema({
-    nickname: {
+const hikeSchema = new Schema({
+    name: {
         type: String
     },
     description: {
@@ -17,20 +12,15 @@ const hikesSchema = new Schema({
     imageUrl: {
         type: String
     },
-    time: String,
-    location: String
-}, {timestamps: true})
+    location: String,
+    time: String
+})
+
 
 
 // Model
-const Hike = model('Hike', hikesSchema)
+const Hike = model('Hike', hikeSchema)
 
 
 // Export
-module.exports = hikesSchema
-
-
-
-
-
-
+module.exports = Hike

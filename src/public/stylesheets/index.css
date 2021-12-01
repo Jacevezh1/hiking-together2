@@ -105,3 +105,103 @@
 
 
 
+#text-username-profile {
+
+  color: rgb(180, 69, 24);
+  text-align: center;
+  margin: 1rem;
+}
+
+
+
+#text-email-profile {
+
+  color: rgb(180, 69, 24);
+  text-align: center;
+  margin: 1rem;
+
+}
+
+
+
+
+#hikes-available {
+  color: rgb(165, 17, 17);
+  font-size: calc(1.375rem + 1.5vw);
+  margin-top: 8.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+
+
+
+.logo-foto{
+
+  max-width: 100%;
+  height: auto;
+  
+
+}
+
+
+#create-title{
+
+  text-align: center;
+
+
+}
+
+
+
+#location-hike-card{
+
+  color: rgb(187, 93, 93);
+  text-align: center;
+}
+
+
+
+#description-hike-card {
+
+  color: rgb(187, 93, 93);
+  text-align: center;
+
+}
+
+
+
+#time-hike-card{
+
+  color: rgb(187, 93, 93);
+  text-align: center;
+
+}
+
+
+
+
+#time-location-single {
+
+  color: rgb(187, 93, 93);
+  text-align: center;
+
+}
+
+
+
+#time-description-single {
+
+  color: rgb(187, 93, 93);
+  text-align: center;
+
+}
+
+
+
+#time-hike-single {
+
+  color: rgb(187, 93, 93);
+  text-align: center;
+}
