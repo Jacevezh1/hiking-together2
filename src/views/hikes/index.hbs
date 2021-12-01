@@ -1,31 +1,29 @@
-<div class="bg-white">
-    <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-        <div class="md:flex md:items-center md:justify-between">
-            <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Listado de cuartos</h2>
-        </div>
-        <div class="mt-6 grid grid-cols-2 gap-x-4 gap-y-10 sm:gap-x-6 md:grid-cols-4 md:gap-y-0 lg:gap-x-8">
-            {{#each hikes}}
-            <div class="group relative">
-                <div class="w-full h-56 bg-gray-200 rounded-md overflow-hidden group-hover:opacity-75 lg:h-72 xl:h-80">
-                    <img src="{{this.imageUrl}}" alt="Hand stitched, orange leather long wallet."
-                        class="w-full h-full object-center object-cover">
-                </div>
-                <h3 class="mt-4 text-sm text-gray-700">
-                    <a href="/hikes/chat">
-                        <span class="absolute inset-0"></span>
-                        {{this.name}}
-                    </a>
-                </h3>
-                <p class="mt-1 text-sm text-gray-500">{{this.description}}</p>
-                <p class="mt-1 text-sm font-medium text-gray-900">Horarios {{this.time}}</p>
-                <p class="mt-1 text-sm font-medium text-gray-900">Lugar: {{this.location}}</p>
-            </div>
-            {{/each}}
-        </div>
-        <div class="mt-8 text-sm md:hidden">
-            <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Find a partner<span
-                    aria-hidden="true"> &rarr;</span></a>
-        </div>
-    </div>
+<div class="position-relative"></div>
+<div class="position-absolute top-0 start-50 translate-middle-x">
+    <h1 id="hikes-available" style="color: black;">Hikes disponibles</h1>
 </div>
+
+
+
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {{#each allHikes}}
+  <div class="col">
+    <div class="card">
+      <img src="{{this.imageUrl}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="location-hike-card" class="card-title">{{this.location}}</h5>
+        <p id="description-hike-card" class="card-text">{{this.description}}</p>
+        <p id="time-hike-card" class="card-text">{{this.time}}</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted"><a href="/hikes/{{this._id}}" class="card-link">See details</a></small>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+
+
 

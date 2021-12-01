@@ -1,0 +1,38 @@
+<div class="card position-absolute top-50 start-50 translate-middle"></div>
+<div class="position-absolute top-50 start-50 translate-middle">
+  <main class="form-signin">
+    <form id="sign-form" action="/hikes/crear" method="post">
+      <img id="image-login" class="mb-4"
+        src="https://o.remove.bg/downloads/d153fc92-eaec-4dcd-9c29-e1481824bb5e/hiking-logo-design-removebg-preview.png"
+        alt="" width="170" height="120">
+      <h1 id="create-title" class="h3 mb-3 fw-normal">Crea tu Hike</h1>
+      
+      <div class="badge bg-primary text-wrap" style="width: 6rem;">
+        Creador: {{currentUser.name}}
+      </div>
+      
+      <div class="form-floating">
+        <input name="description" type="text" class="form-control" placeholder="¡Un hike chingón!">
+        <label class="label-form" for="description">Descripción del hike</label>
+      </div>
+      <div class="form-floating">
+        <input name="time" type="text" class="form-control" placeholder="hora">
+        <label class="label-form" for="time">Horario</label>
+      </div>
+      <div class="form-floating">
+        <input name="location" type="text" class="form-control" placeholder="¿En qué lugar?">
+        <label class="label-form" for="location">Lugar</label>
+      </div>
+      <div class="form-floating">
+        <input name="imageUrl" type="text" class="form-control" placeholder="URL de tu imagen">
+        <label class="label-form" for="imageUrl">URL de tu imagen</label>
+      </div>
+      <button id="button-login" class="w-100 btn btn-lg btn-danger" type="submit">Crear</button>
+      <p class="mt-5 mb-3 text-muted">© 2021</p>
+
+      {{#if msg}}
+      <p class="text-red-400"> {{msg}} </p>
+      {{/if}}
+    </form>
+  </main>
+</div>

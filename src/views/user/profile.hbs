@@ -1,24 +1,14 @@
-
-
+<div class="position-relative"></div>
 {{#if currentUser}}
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">{{currentUser.name}}</h5>
-    <p class="card-text"> {{currentUser.email}}</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"> Information</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-  </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
-  </div>
+<div>
+    <p style="color: brown;">Hola! {{currentUser.name}}   </p>
+</div>
+<div class="card position-absolute top-50 start-50 translate-middle" style="width: 18rem;">
+    <img src="http://cdn.onlinewebfonts.com/svg/img_264157.png" class="card-img-top" alt="...">
+    <h5 id="text-username-profile" class="card-title">{{currentUser.name}}</h5>
+    <p id="text-email-profile" class="card-text"> Your Email: {{currentUser.email}} </p>
+    <a href="/auth/edit" class="card-link text-center">Edit Profile</a>
 </div>
 {{/if}}
-
-
-
+</div>
 

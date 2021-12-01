@@ -72,7 +72,6 @@ exports.postSignup = async (req, res) => {
             _id: createdUser._id,
             name: createdUser.name,
             email: createdUser.email,
-            imgUrl: createdUser.imgUrl
         }        
     
         // Redirection, una vez creado el usuario que me redirija a la vista de usuario en particular

@@ -10,7 +10,7 @@ const connectDB = require('./db')
 
 const path = require('path')
 
-
+const sessionManager = require('./config/session')
 
 // 2. Middlewares ( Static files - HTML CSS JS IMAGES )
 
@@ -27,14 +27,16 @@ app.use(express.urlencoded({ extended: true }))
 
 connectDB()
 
-// 3. Layout Middleware (Importante para saber si un usrio esta loggeado y checar en las vistas)
+// Sessions
+sessionManager(app)
 
+
+
+// 3. Layout Middleware (Importante para saber si un usrio esta loggeado y checar en las vistas)
 app.use((req, res, next) => {
     res.locals.currentUser = req.session.currentUser
     next()
 })
-
-
 
 
 // 4. Routes
@@ -49,9 +51,8 @@ app.use('/auth', require('./routes/auth.router'))
 app.use('/user', require('./routes/user.router'))
 
 // d) Hikes
+
 app.use('/hikes', require('./routes/hikes.router'))
-
-
 
 
 // 5. Export
