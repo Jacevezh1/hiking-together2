@@ -1,51 +1,57 @@
+
 {{#if currentUser}}
-<header id="navbar" class="p-3 bg-dark text-white">
-  <div class="container">
-    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-          <use xlink:href="#bootstrap"></use>
-        </svg>
-      </a>
-
-      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="/hikes" class="nav-link px-2 text-white">Hikes</a></li>
-        <li><a href="/user/{{currentUser.name}}" class="nav-link px-2 text-white">Mi perfil</a></li>
-        <li><a href="/hikes/crear" class="nav-link px-2 text-white">Crear Hike</a></li>
-        <form style="color: brown;" action="/auth/logout" method="POST">
+<nav class="navbar navbar-light" style="background-color: #4783ad; fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="">Hiking Together</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Hiking Together</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/user/{{currentUser.name}}">Mi perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/hikes">Hikes</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="/hikes/crear">Crea tu Hike</a>
+          </li>
+        <form class="d-flex" style="color: brown;" action="/auth/logout" method="POST">
         <button type="submit" class="btn btn-primary">Log Out</button>
-      </form>
-      </ul>
-
-
-      
-
-      {{else}}
-
-      <header id="navbar2" class="p-3 bg-dark text-white">
-        <div class="container">
-          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                <use xlink:href="#bootstrap"></use>
-              </svg>
-            </a>
-
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
-              <li><a href="/about" class="nav-link px-2 text-white">About</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-
-            </ul>
-
-          </div>
-        </div>
+        </form>
+      </div>
     </div>
-</header>
+  </div>
+</nav>
+{{else}}
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #4783ad;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Hiking Together</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/faqs">FAQs</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 {{/if}}
-
-
-
 
 
 

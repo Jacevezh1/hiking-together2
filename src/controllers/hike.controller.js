@@ -1,5 +1,5 @@
-// 1. IMPORTS
 const Hike = require('./../models/Hike')
+
 
 
 
@@ -11,8 +11,6 @@ const Hike = require('./../models/Hike')
 // a) Get all Hikes (Read)
 exports.gethikes = async(req, res) => {
     try {
-
-		
         const allHikes = await Hike.find({})
         res.render('hikes/index', {
             allHikes
@@ -24,7 +22,6 @@ exports.gethikes = async(req, res) => {
 
 
 exports.getSingleHike = async (req, res) => {
-
 
 
 	// Funcion que me permite obtener la ruta de un hike en particular por su ID
@@ -42,7 +39,7 @@ exports.getSingleHike = async (req, res) => {
 
 		return 
 	}
-	
+
 	console.log(getTheHike)
 
 	// Renderizamos la informacion del hike en particular al cual le damos click
@@ -50,7 +47,7 @@ exports.getSingleHike = async (req, res) => {
 		data: getTheHike
 	})
 
-	
+
 }
 
 
@@ -90,36 +87,48 @@ exports.createHike = async (req, res) => {
 
 
 // c) Edit views and hikes
-
-
 exports.viewEditHike = async(req, res) => {
-
- exports.viewEditHike = async(req, res) => {
-
 	//Nos permite obtener los datos dinamicos de una ruta
-	
-
-	
+	console.log(req.params)
 	// Asignar el id a una varibale del libro
-	const {hikeID} = req.params
-
+	const hikeID = req.params.hikeID
 	// Encontrar un libro en particular
 	const foundHike = await Hike.findById(hikeID)
-
-	console.log(foundBook)
-
-	res.render("hikes/:hikeID/edit",{
+	console.log(foundHike)
+	res.render("hikes/edit",{
 		// los daros del lirbo se manda a tareves de de data
-		foundHike
+		data:foundHike
 	} )
-
 }
 
 
 
 
 
+ exports.editHike = async(req, res) => {
+	// 1. ID del libro a editar
+	const hikeID = req.params.hikeID
+	// 2. Los nuevos cambios del formulario
+	
+	const description = req.body.description
+	const time = req.body.time
+	const location = req.body.location
+	console.log(hikeID)
+	console.log( description, time, location )
+	// 3. Realizar la actualizacion en la base de datos
+	// Lo busca en la base de datos por su ID, donde le menciona que se le pasaran nuevos arguments
+	const updatedHike = await Hike.findByIdAndUpdate(
+		hikeID,
+		{description, time, location},
+		{new: true}
+		
+	)
+	console.log(updatedHike)
+	// Al actulizarlo me manda a la pagina ya con el libro actualizado en particular
+	res.redirect(`/hikes`)
+} 
+
+
 
 
 // d) Delete 
-
