@@ -90,10 +90,10 @@ exports.createHike = async (req, res) => {
 
 
 // c) Edit views and hikes
-/* exports.viewEditHike = async(req, res) => {
+ exports.viewEditHike = async(req, res) => {
 
 	//Nos permite obtener los datos dinamicos de una ruta
-	console.log(req.params)
+
 
 	// Asignar el id a una varibale del libro
 	const hikeID = req.params.hikeID
@@ -108,7 +108,7 @@ exports.createHike = async (req, res) => {
 		data:foundHike
 	} )
 
-} */
+}
 
 
 
