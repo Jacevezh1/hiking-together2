@@ -10,10 +10,13 @@
     <p id="time-hike-single" class="card-text"><small class="text-muted">{{this.time}}</small></p>
   </div>
   <div class="card-footer">
-    <small class="text-muted"><a href="/hikes" class="card-link">Go Back</a></small>
+    <form method="POST">
+        <a href="/hikes/" class="btn btn-secondary"> Go back </a>
+      </form>
   </div>
   {{/with}}
   {{#if owner}}
+<<<<<<< HEAD
   <a href="/hikes/{{_id}}/edit"> Editar </a>
   {{/if}}
 </div>
@@ -27,3 +30,11 @@
 
 
 
+=======
+<form style="color: blue; margin-left:4%; margin-bottom:1%" method="POST">
+        <a href="/hikes/edit/:hikeID" class="btn btn-primary"> Editar </a>
+      </form>
+  {{/if}}
+</div>
+
+>>>>>>> 215058b48756fa9505e0cb7b55b7b9a3c164e1f1

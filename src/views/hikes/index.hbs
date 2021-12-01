@@ -1,16 +1,9 @@
-<div class="position-relative"></div>
-<div class="position-absolute top-0 start-50 translate-middle-x">
-    <h1 id="hikes-available" style="color: black;">Hikes disponibles</h1>
-</div>
 
-
-
-
-
-<div class="row row-cols-1 row-cols-md-3 g-4">
+<div class="col col-rows-1 col-rows-md-3 col-rows-lg-1" style="margin-top: 4%;">
+  <h1 class="text-center">Hikes disponibles</h1>
     {{#each allHikes}}
   <div class="col">
-    <div class="card">
+    <div class="card" style="margin-top: 4%;">
       <img src="{{this.imageUrl}}" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 id="location-hike-card" class="card-title">{{this.location}}</h5>
@@ -23,7 +16,6 @@
     </div>
     {{/each}}
   </div>
-
-
+</div>
 
 
