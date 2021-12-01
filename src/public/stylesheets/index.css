@@ -82,6 +82,7 @@
 }
 
 
+
 .carousel {
 
   margin-bottom: 4rem;
@@ -102,6 +103,7 @@
     margin-left: calc(-.5 * var(--bs-gutter-x));
     box-sizing: border-box;
 }
+
 
 
 
@@ -205,3 +207,12 @@
   color: rgb(187, 93, 93);
   text-align: center;
 }
+
+.index img {
+  object-fit: none; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  min-width: 50%;
+  max-height: 250px;
+  margin-bottom: 1rem;
+}
+
