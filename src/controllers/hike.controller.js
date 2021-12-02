@@ -29,8 +29,6 @@ exports.getSingleHike = async (req, res) => {
 
 	const getTheHike = await Hike.findById(singleHikeID)
 
-	console.log(req.session.currentUser.name, getTheHike.name )
-
 	if(req.session.currentUser.name === getTheHike.name){
 		res.render("hikes/single", {
 			data: {getTheHike, owner: true}

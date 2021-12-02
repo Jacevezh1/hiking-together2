@@ -43,6 +43,3 @@ router.post("/delete/:hikeID", deleteHike)
 
 // Export
 module.exports = router
-
-
-

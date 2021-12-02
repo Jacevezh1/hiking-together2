@@ -3,29 +3,26 @@
 <h1 style="text-align:center;">Single Hike</h1>
 <div class="card mb-3">
   <img src="{{this.getTheHike.imageUrl}}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 id="time-location-single" class="card-title">{{this.getTheHike.location}}</h5>
-    <p id="time-description-single" class="card-text">{{this.getTheHike.description}}</p>
-    <p id="time-hike-single" class="card-text"><small class="text-muted">{{this.getTheHike.time}}</small></p>
+  <div class="card-body" style="background-color: #00538C;">
+    <h5 id="time-location-single" class="card-title text-warning">{{this.getTheHike.location}}</h5>
+    <p id="time-description-single" class="card-text text-light">{{this.getTheHike.description}}</p>
+    <p id="time-hike-single" class="card-text"><small class="text-light">{{this.getTheHike.time}}</small></p>
   </div>
-  <div class="card-footer">
+  <div class="card-footer d-flex flex-row justify-content-around" style="background-color: #00538C;">
     <form method="POST">
         <a href="/hikes/" class="btn btn-secondary"> Go back </a>
       </form>
+      <form method="POST">
+        <a href="/hikes/edit/{{this.getTheHike._id}}" class="btn btn-warning"> Editar </a>
+      </form>
+      <form method="POST">
+        <a href="/hikes/delete/{{this.getTheHike._id}}" class="btn btn-danger"> Borrar </a>
+      </form>
   </div>
-  
-<form style="color: blue; margin-left:4%; margin-bottom:1%" method="POST">
-        <a href="/hikes/edit/{{this.getTheHike._id}}" class="btn btn-primary"> Editar </a>
- </form>
- {{!-- <form style="color: rgb(189, 10, 10); margin-left:4%; margin-bottom:1%" method="POST">
-        <a href="/hikes/edit/{{this.getTheHike._id}}" class="btn btn-primary"> Delete </a>
- </form> --}}
- <form method="POST" action="/hikes/delete/{{this.getTheHike._id}}">
-			<button>Borrar</button>
-	</form>
+ 
 </div>
 {{else}}
-<h1>Single Hike</h1>
+<h1 style="text-align:center;">Single Hike</h1>
 <div class="card mb-3">
   <img src="{{this.imageUrl}}" class="card-img-top" alt="...">
   <div class="card-body">
