@@ -1,0 +1,34 @@
+<div class="position-relative"></div>
+<div class="position-absolute top-50 start-50 translate-middle w-100" style="margin-top:5%;">
+  <main class="form-signin">
+    <form id="sign-form" action="/user/edit/{{data._id}}" method="post">
+      <img class="image-login mb-4 image-login rounded-circle"
+        style="display: block; margin-right: auto; margin-left: auto; margin-top:50%" src="/images/logo-basico.png"
+        alt="" width="170" height="120">
+      <h1 id="create-title" class="h3 mb-3 fw-normal">Editar Usuario</h1>
+      
+      <div class="mb-2">
+      <input name="name" type="text" class="form-control"  placeholder="usuario">
+    </div>
+
+      <div class="mb-2">
+      <input name="email" type="email" class="form-control"  placeholder="Rolo@gmail.com">
+    </div>
+
+      <div class="mb-2">
+      <input name="password" type="password" class="form-control"  placeholder="Password">
+    </div>
+
+      <div class="mb-2">
+        <textarea name="imageUrl" class="form-control" rows="2" placeholder="URL de imagen"></textarea>
+      </div>
+
+      <button id="button-login" class="w-100 btn btn-lg btn-warning" type="submit">Editar</button>
+      <p class="mt-5 mb-3 text-muted">© 2021</p>
+      {{#if msg}}
+      <p class="text-red-400"> {{msg}} </p>
+      {{/if}}
+    </form>
+  </main>
+</div>
+

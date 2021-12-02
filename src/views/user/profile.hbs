@@ -8,7 +8,7 @@
     <img src="http://cdn.onlinewebfonts.com/svg/img_264157.png" class="card-img-top" alt="...">
     <h5 style="color:#308199" id="text-username-profile" class="card-title">Hola, {{currentUser.name}}!!</h5>
     <p id="text-email-profile" class="card-text"> Your Email: {{currentUser.email}} </p>
-    <a href="/auth/edit" class="btn btn-outline-light me-2 bg-light w-100 text-center" style="color:#4F97A3; font: weight 750px;">Edit Profile</a>
+    <a href="/user/edit/{{currentUser._id}}" class="btn btn-outline-light me-2 bg-light w-100 text-center" style="color:#4F97A3; font: weight 750px;">Edit Profile</a>
 </div>
 {{/if}}  
 </div>
