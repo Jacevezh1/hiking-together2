@@ -6,6 +6,10 @@ const index = require("./../controllers/index")
 // 2. Routes
 router.get('/', index.home)
 router.get('/about', index.about)
+router.get('/faqs', index.faqs)
+
+
+
 
 // 3. Export
 module.exports = router

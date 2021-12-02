@@ -7,13 +7,17 @@ const { gethikes, getSingleHike, viewCreateHike, createHike, viewEditHike, editH
 
 // 2.2 Crear
 
+// a) Para observar el formulario
+router.get("/crear", viewCreateHike)
 
-router.get("/crear", viewCreateHike)// a) Para observar el formulario
-router.post("/crear", createHike)// b) Para crear un libro
-router.get('/', gethikes)// 2.1 Read (Lectura de los hikes creados, y un en especifico, o sea single)
+// b) Para crear un libro
+router.post("/crear", createHike)
 
-router.get("/edit/:hikeID", viewEditHike)// 3. View Edit (Hike)
-router.post("/edit/:hikeID", editHike) // 4. Edit
+
+
+// 2.1 Read (Lectura de los hikes creados, y un en especifico, o sea single)
+router.get('/', gethikes)
+
 router.get("/:hikeID", getSingleHike)
 
 
@@ -21,14 +25,10 @@ router.get("/:hikeID", getSingleHike)
 
 // 3. Edit (Hike)
 
+router.get("/:hikeID/edit", viewEditHike) 
 
 
-
-
-
-
-
-// 4. Delete
+router.post("/:hikeID/edit", editHike)
 
 
 

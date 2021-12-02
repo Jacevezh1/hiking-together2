@@ -5,3 +5,8 @@ exports.home = (req, res) => {
 exports.about =  (req,res) => {
     res.render('about')
 }
+
+
+exports.faqs =  (req,res) => {
+    res.render('faqs')
+}

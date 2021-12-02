@@ -1,5 +1,5 @@
-// 1. IMPORTS
 const Hike = require('./../models/Hike')
+
 
 
 
@@ -11,8 +11,6 @@ const Hike = require('./../models/Hike')
 // a) Get all Hikes (Read)
 exports.gethikes = async(req, res) => {
     try {
-
-		
         const allHikes = await Hike.find({})
         res.render('hikes/index', {
             allHikes
@@ -24,7 +22,6 @@ exports.gethikes = async(req, res) => {
 
 
 exports.getSingleHike = async (req, res) => {
-
 
 
 	// Funcion que me permite obtener la ruta de un hike en particular por su ID
@@ -41,7 +38,7 @@ exports.getSingleHike = async (req, res) => {
 
 		return 
 	}
-	
+
 	console.log(getTheHike)
 
 	// Renderizamos la informacion del hike en particular al cual le damos click
@@ -49,7 +46,7 @@ exports.getSingleHike = async (req, res) => {
 		data: getTheHike
 	})
 
-	
+
 }
 
 
@@ -90,6 +87,7 @@ exports.createHike = async (req, res) => {
 
 // c) Edit views and hikes
 
+
 exports.viewEditHike = async (req, res) => {
 
 	const singleHikeID = req.params.hikeID
@@ -101,27 +99,6 @@ exports.viewEditHike = async (req, res) => {
 	})
 }
 
-//  exports.viewEditHike = async(req, res) => {
-
-// 	//Nos permite obtener los datos dinámicos de una ruta
-	
-// 	// Asignar el id a una variable del libro
-// 	const singleHikeID = req.params.hikeID
-
-// 	// Encontrar un libro en particular
-// 	const foundHike = await Hike.findById(singleHikeID)
-
-// 	console.log(foundHike)
-
-// 	res.render("hikes/edit/",{
-// 		// los datos del libro se mandan a través de data
-// 		data: foundHike
-// 		}
-// 	)
-
-
-// 	console.log(req.session.currentUser.name)
-// }
 
 
 
@@ -147,6 +124,7 @@ exports.editHike = async(req, res) => {
 		{new: true}		
 	)
 
+
 	console.log(updatedHike)
 
 	// Al actulizarlo me manda a la pagina ya con el libro actualizado en particular
@@ -158,5 +136,6 @@ exports.editHike = async(req, res) => {
 
 
 
-// d) Delete 
 
+
+// d) Delete 
