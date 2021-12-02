@@ -35,7 +35,7 @@ router.post("/edit/:hikeID", editHike)
 
 
 
-// 4. Delete 
+// 4. Delete (Done con el CRUD, LISTO)
 
 router.post("/delete/:hikeID", deleteHike)
 
