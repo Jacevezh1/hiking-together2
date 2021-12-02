@@ -153,3 +153,4 @@ exports.deleteHike = async (req, res) => {
 
 
 }
+
