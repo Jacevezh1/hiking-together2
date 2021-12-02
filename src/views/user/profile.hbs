@@ -5,9 +5,7 @@
 <div class="position-absolute top-50 start-50 translate-middle">
 {{#if currentUser}}
 <div id="profile" class="card " style="width: 18rem; margin-top: 10%">
-    {{#if currentUser.imageUrl}}
-    <img src="{{currentUser.imageUrl}}" class="card-img-top" alt="...">
-    {{/if}}    
+    <img src={{currentUser.imageUrl}} class="card-img-top" alt="...">
     <img src="http://cdn.onlinewebfonts.com/svg/img_264157.png" class="card-img-top" alt="...">
     <h5 style="color:#308199" id="text-username-profile" class="card-title">Hola, {{currentUser.name}}!!</h5>
     <p id="text-email-profile" class="card-text"> Your Email: {{currentUser.email}} </p>

@@ -27,9 +27,6 @@ exports.editUser = async(req, res) => {
 
 	// 2. Los nuevos cambios del formulario
 
-	const name = req.body.name
-	const email = req.body.email
-	const password = req.body.password
 	const imageUrl = req.body.imageUrl
 
 	// 3. Realizar la actualizacion en la base de datos
@@ -37,7 +34,7 @@ exports.editUser = async(req, res) => {
 	// Lo busca en la base de datos por su ID, donde le menciona que se le pasaran nuevos arguments
 	const updatedUser = await User.findByIdAndUpdate(
 		userID,
-		{name, email, password, imageUrl},
+		{imageUrl},
 		{new: true}		
 	)
 
