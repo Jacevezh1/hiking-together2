@@ -10,3 +10,11 @@ exports.about =  (req,res) => {
 exports.faqs =  (req,res) => {
     res.render('faqs')
 }
+
+
+
+exports.extra =  (req,res) => {
+    res.render('extra')
+}
+
+

@@ -64,15 +64,15 @@ exports.createHike = async (req, res) => {
 
 	console.log(req.body)
 
-	// Info a mostar al crear mi nuevo libro
+	// Info a mostar al crear mi nuevo hike
 	const name =  req.session.currentUser.name
 	const description = req.body.description
 	const imageUrl = req.body.imageUrl
 	const location = req.body.location
     const time = req.body.time
+	const contact = req.body.contact
 
-
-	const newHikeCreated = await Hike.create({name, description, imageUrl, location, time})
+	const newHikeCreated = await Hike.create({name, description, imageUrl, location, time, contact})
 
 	console.log(newHikeCreated)
 
@@ -114,13 +114,14 @@ exports.editHike = async(req, res) => {
 	const location = req.body.location
 	const imageUrl = req.body.imageUrl
 	const name =  req.session.currentUser.name
+	const contact = req.body.contact
 
 	// 3. Realizar la actualizacion en la base de datos
 
 	// Lo busca en la base de datos por su ID, donde le menciona que se le pasaran nuevos arguments
 	const updatedHike = await Hike.findByIdAndUpdate(
 		hikeID,
-		{name, description, imageUrl, location, time},
+		{name, description, imageUrl, location, time, contact},
 		{new: true}		
 	)
 
