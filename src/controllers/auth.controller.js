@@ -23,6 +23,7 @@ exports.postSignup = async (req, res) => {
         name, 
         email,
         password,  
+        imageUrl
 
     } = req.body
 
@@ -31,7 +32,7 @@ exports.postSignup = async (req, res) => {
 
     // Validacion para verificar que el usuario adjunte todos los campos necesarios
    
-    if(!name, !email, !password){
+    if(!name, !email, !password, !imageUrl){
         return res.render('auth/signup', {
             msg: 'Todos los campos necesarios.'
         })
@@ -61,6 +62,7 @@ exports.postSignup = async (req, res) => {
             name,
             email,
             password: hashedPassword,
+            imageUrl
             
         })
 
@@ -72,6 +74,7 @@ exports.postSignup = async (req, res) => {
             _id: createdUser._id,
             name: createdUser.name,
             email: createdUser.email,
+            imageUrl: createdUser.imageUrl
         }        
     
         // Redirection, una vez creado el usuario que me redirija a la vista de usuario en particular
@@ -147,6 +150,7 @@ exports.postLogin = async(req, res) => {
             _id: findUser._id,
             name: findUser.name,
             email: findUser.email,
+            imageUrl: findUser.imageUrl
         }
 
         // Redirect, una vez encontrado, manda al usuario a su pagina personalizada ya loggeado

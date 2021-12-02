@@ -15,8 +15,8 @@
       <form method="POST">
         <a href="/hikes/edit/{{this.getTheHike._id}}" class="btn btn-warning"> Editar </a>
       </form>
-      <form method="POST">
-        <a href="/hikes/delete/{{this.getTheHike._id}}" class="btn btn-danger"> Borrar </a>
+      <form method="POST" action="/hikes/delete/{{this.getTheHike._id}}">
+       <button class="btn btn-danger"> Borrar </button>   
       </form>
   </div>
  

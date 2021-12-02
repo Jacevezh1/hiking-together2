@@ -12,6 +12,20 @@ router.get('/:user', getProfile)
 router.get("/edit/:userID", viewEditUser) 
 router.post("/edit/:userID", editUser)
 
+
+
+// Edit User
+router.get("/edit/:userID", viewEditUser) 
+
+router.post("/edit/:userID", editUser)
+
+
+
+
+
+
+
+
 // 3. Export
 
 module.exports = router

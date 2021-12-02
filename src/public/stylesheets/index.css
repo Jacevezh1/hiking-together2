@@ -392,7 +392,6 @@
 
 
 
-
 .chat-titles{
 
   color: black;
@@ -400,10 +399,6 @@
 
 }
 
-
-
-
-/* PENDIENTE VERIFICAR SI NO AFECTA OTROS ESTILOS (ESTO LO APLIQUE PARA EL EXTRA DE HOME) */
 
 
 hr:not([size]) {
