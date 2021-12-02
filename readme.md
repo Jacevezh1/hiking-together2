@@ -1,6 +1,6 @@
 <p align="center">  <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://townsvillehikeandexplore.com/wp-content/uploads/2021/03/townsville-hike-and-explore-logo.png" alt="bootstrap" width="120" height="120"/> </a>
 
-<h1 align="center">Hi 👋, we are hiking together HIKING TOGETHER</h1>
+<h1 align="center">Hi 👋, we are HIKING TOGETHER</h1>
 <h3 align="center">A platform to arrange hikes with other people that have the same passion as you about hiking...</h3>
 
 <br>
