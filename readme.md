@@ -99,7 +99,7 @@ Usamos [Git](https://git-scm.com/) para el versionado. Para todas las versiones 
 
 ## Autores ✒️
 
-- **Pablo** - _Founder & developer_ - [Pablo](https://github.com/villanuevand)
+- **Pablo** - _Founder & developer_ - [Pablo]()
 - **Javier** - _Founder & developer_ - [JavierHerrera](#fulanito-de-tal)
 
 <br>
