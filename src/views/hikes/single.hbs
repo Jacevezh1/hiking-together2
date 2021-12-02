@@ -1,9 +1,7 @@
-
-
-
-<h1>Single Hike</h1>
+{{#with data}}
+{{#if owner}}
+<h1 style="text-align:center;">Single Hike</h1>
 <div class="card mb-3">
- {{#with data}}
   <img src="{{this.getTheHike.imageUrl}}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 id="time-location-single" class="card-title">{{this.getTheHike.location}}</h5>
@@ -15,11 +13,31 @@
         <a href="/hikes/" class="btn btn-secondary"> Go back </a>
       </form>
   </div>
-  {{#if owner}}
+  
 <form style="color: blue; margin-left:4%; margin-bottom:1%" method="POST">
         <a href="/hikes/edit/{{this.getTheHike._id}}" class="btn btn-primary"> Editar </a>
-      </form>
-  {{/if}}
+ </form>
+ {{!-- <form style="color: rgb(189, 10, 10); margin-left:4%; margin-bottom:1%" method="POST">
+        <a href="/hikes/edit/{{this.getTheHike._id}}" class="btn btn-primary"> Delete </a>
+ </form> --}}
+ <form method="POST" action="/hikes/delete/{{this.getTheHike._id}}">
+			<button>Borrar</button>
+	</form>
 </div>
+{{else}}
+<h1>Single Hike</h1>
+<div class="card mb-3">
+  <img src="{{this.imageUrl}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 id="time-location-single" class="card-title">{{this.location}}</h5>
+    <p id="time-description-single" class="card-text">{{this.description}}</p>
+    <p id="time-hike-single" class="card-text"><small class="text-muted">{{this.time}}</small></p>
+  </div>
+  <div class="card-footer">
+    <form method="POST">
+        <a href="/hikes/" class="btn btn-secondary"> Go back </a>
+      </form>
+  </div>
+  {{/if}}
 {{/with}}
 
