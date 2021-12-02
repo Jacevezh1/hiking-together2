@@ -25,10 +25,10 @@ router.get("/:hikeID", getSingleHike)
 
 // 3. Edit (Hike)
 
-router.get("/:hikeID/edit", viewEditHike) 
+router.get("/edit/:hikeID", viewEditHike) 
 
 
-router.post("/:hikeID/edit", editHike)
+router.post("/edit/:hikeID", editHike)
 
 
 
