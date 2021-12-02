@@ -5,13 +5,14 @@
 
     <div class="card" style="margin-top: 4%;">
       <img src="{{this.imageUrl}}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 id="location-hike-card" class="card-title">{{this.location}}</h5>
-        <p id="description-hike-card" class="card-text">{{this.description}}</p>
-        <p id="time-hike-card" class="card-text">{{this.time}}</p>
+      <div class="card-body" style="background-color: #00538C;">
+        <h5 id="location-hike-card" class="card-title text-warning">{{this.location}}</h5>
+        <p id="description-hike-card" class="card-text text-light">{{this.description}}</p>
+        <p id="time-hike-card" class="card-text text-light">{{this.time}}</p>
       </div>
-      <div class="card-footer">
-        <small class="text-muted"><a href="/hikes/{{this._id}}" class="card-link">See details</a></small>
+      <div class="d-flex justify-content-center" style="background-color: #00538C;">
+        <button class="w-30 btn btn-lg btn-warning justify-content-center">
+         <a href="/hikes/{{this._id}}" style="text-decoration: none;">Ver detalles</a></button>
       </div>
     </div>
     {{/each}}
