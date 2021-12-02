@@ -23,6 +23,12 @@ const userSchema = new Schema({
         type: String,
         required: [true, 'Password is required.']
     },
+    imageUrl: {
+        type: String,
+        trim: true,
+        required: [false],
+        default: 'http://cdn.onlinewebfonts.com/svg/img_264157.png'
+    }
    
 }, {timestamps: true})
 
