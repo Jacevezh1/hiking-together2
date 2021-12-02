@@ -29,8 +29,6 @@ exports.getSingleHike = async (req, res) => {
 
 	const getTheHike = await Hike.findById(singleHikeID)
 
-	console.log(req.session.currentUser.name, getTheHike.name )
-
 	if(req.session.currentUser.name === getTheHike.name){
 		res.render("hikes/single", {
 			data: {getTheHike, owner: true}
@@ -139,3 +137,19 @@ exports.editHike = async(req, res) => {
 
 
 // d) Delete 
+
+exports.deleteHike = async (req, res) => {
+
+	// Identificar el libro que quiero borrar
+	const hikeID = req.params.hikeID
+
+	// Borrado en base de datos
+	const deletedHike = await Hike.findByIdAndDelete(hikeID)
+
+	console.log(deletedHike)
+
+	// Redireccion
+	res.redirect("/hikes")
+
+
+}

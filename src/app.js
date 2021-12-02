@@ -62,6 +62,3 @@ app.use('/hikes', require('./routes/hikes.router'))
 // 5. Export
 
 module.exports = app
-
-
-
