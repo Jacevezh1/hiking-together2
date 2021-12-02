@@ -33,8 +33,7 @@ exports.getSingleHike = async (req, res) => {
 
 	if(req.session.currentUser.name === getTheHike.name){
 		res.render("hikes/single", {
-			data: getTheHike,
-			owner: true
+			data: {getTheHike, owner: true}
 		})
 
 		return 
@@ -87,46 +86,54 @@ exports.createHike = async (req, res) => {
 
 
 // c) Edit views and hikes
-exports.viewEditHike = async(req, res) => {
-	//Nos permite obtener los datos dinamicos de una ruta
-	console.log(req.params)
-	// Asignar el id a una varibale del libro
-	const hikeID = req.params.hikeID
-	// Encontrar un libro en particular
-	const foundHike = await Hike.findById(hikeID)
-	console.log(foundHike)
-	res.render("hikes/edit",{
-		// los daros del lirbo se manda a tareves de de data
-		data:foundHike
-	} )
+
+
+exports.viewEditHike = async (req, res) => {
+
+	const singleHikeID = req.params.hikeID
+
+	const getTheHike = await Hike.findById(singleHikeID)
+
+	res.render("hikes/edit", {
+		data: getTheHike
+	})
 }
 
 
 
 
-
- exports.editHike = async(req, res) => {
+exports.editHike = async(req, res) => {
+	console.log(req.body, req.params)
 	// 1. ID del libro a editar
-	const hikeID = req.params.hikeID
+	const {hikeID} = req.params
+
 	// 2. Los nuevos cambios del formulario
-	
+
 	const description = req.body.description
 	const time = req.body.time
 	const location = req.body.location
-	console.log(hikeID)
-	console.log( description, time, location )
+	const imageUrl = req.body.imageUrl
+	const name =  req.session.currentUser.name
+
 	// 3. Realizar la actualizacion en la base de datos
+
 	// Lo busca en la base de datos por su ID, donde le menciona que se le pasaran nuevos arguments
 	const updatedHike = await Hike.findByIdAndUpdate(
 		hikeID,
-		{description, time, location},
-		{new: true}
-		
+		{name, description, imageUrl, location, time},
+		{new: true}		
 	)
+
+
 	console.log(updatedHike)
+
 	// Al actulizarlo me manda a la pagina ya con el libro actualizado en particular
-	res.redirect(`/hikes`)
-} 
+	res.redirect('/hikes')
+
+}
+
+
+
 
 
 

@@ -4,35 +4,22 @@
 <h1>Single Hike</h1>
 <div class="card mb-3">
  {{#with data}}
-  <img src="{{this.imageUrl}}" class="card-img-top" alt="...">
+  <img src="{{this.getTheHike.imageUrl}}" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 id="time-location-single" class="card-title">{{this.location}}</h5>
-    <p id="time-description-single" class="card-text">{{this.description}}</p>
-    <p id="time-hike-single" class="card-text"><small class="text-muted">{{this.time}}</small></p>
+    <h5 id="time-location-single" class="card-title">{{this.getTheHike.location}}</h5>
+    <p id="time-description-single" class="card-text">{{this.getTheHike.description}}</p>
+    <p id="time-hike-single" class="card-text"><small class="text-muted">{{this.getTheHike.time}}</small></p>
   </div>
   <div class="card-footer">
     <form method="POST">
         <a href="/hikes/" class="btn btn-secondary"> Go back </a>
       </form>
   </div>
-  {{/with}}
   {{#if owner}}
 <form style="color: blue; margin-left:4%; margin-bottom:1%" method="POST">
-        <a href="/hikes/edit/:hikeID" class="btn btn-primary"> Editar </a>
+        <a href="/hikes/edit/{{this.getTheHike._id}}" class="btn btn-primary"> Editar </a>
       </form>
   {{/if}}
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+{{/with}}
 
