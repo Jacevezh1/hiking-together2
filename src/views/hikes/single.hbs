@@ -10,23 +10,23 @@
   </div>
   <div class="card-footer">
     <form method="POST">
-        <a href="/hikes/" class="btn btn-secondary"> Go back </a>
-      </form>
+      <a href="/hikes/" class="btn btn-secondary"> Go back </a>
+    </form>
   </div>
-  
-<form style="color: blue; margin-left:4%; margin-bottom:1%" method="POST">
-        <a href="/hikes/edit/{{this.getTheHike._id}}" class="btn btn-primary"> Editar </a>
- </form>
- {{!-- <form style="color: rgb(189, 10, 10); margin-left:4%; margin-bottom:1%" method="POST">
-        <a href="/hikes/edit/{{this.getTheHike._id}}" class="btn btn-primary"> Delete </a>
- </form> --}}
- <form method="POST" action="/hikes/delete/{{this.getTheHike._id}}">
-			<button>Borrar</button>
-	</form>
+
+  <form style="color: blue; margin-left:4%; margin-bottom:1%" method="POST">
+    <a href="/hikes/edit/{{this.getTheHike._id}}" class="btn btn-primary"> Editar </a>
+  </form>
+  {{!-- <form style="color: rgb(189, 10, 10); margin-left:4%; margin-bottom:1%" method="POST">
+    <a href="/hikes/edit/{{this.getTheHike._id}}" class="btn btn-primary"> Delete </a>
+  </form> --}}
+  <form method="POST" action="/hikes/delete/{{this.getTheHike._id}}">
+    <button>Borrar</button>
+  </form>
 </div>
 {{else}}
-<h1>Single Hike</h1>
-<div class="card mb-3">
+<h1 style="text-align:center;">Single Hike</h1>
+<class="card mb-3">
   <img src="{{this.imageUrl}}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 id="time-location-single" class="card-title">{{this.location}}</h5>
@@ -35,8 +35,21 @@
   </div>
   <div class="card-footer">
     <form method="POST">
-        <a href="/hikes/" class="btn btn-secondary"> Go back </a>
-      </form>
+      <a href="/hikes/" class="btn btn-secondary"> Go back </a>
+    </form>
+  </div>
+</div>
+  <button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
+    aria-controls="offcanvasBottom">Contact me</button>
+
+  <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div style="color: black;" class="offcanvas-body small">
+      Hello, here is my phone, please contact as soon as possible so we can arrange something.
+    </div>
   </div>
   {{/if}}
 {{/with}}
