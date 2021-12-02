@@ -1,7 +1,7 @@
 // 1. Import rooms.router.js
 const router = require('express').Router()
 
-const { gethikes, getSingleHike, viewCreateHike, createHike, viewEditHike, editHike  } = require('./../controllers/hike.controller')
+const { gethikes, getSingleHike, viewCreateHike, createHike, viewEditHike, editHike, deleteHike  } = require('./../controllers/hike.controller')
 
 // 2. Routes
 
@@ -35,7 +35,9 @@ router.post("/edit/:hikeID", editHike)
 
 
 
+// 4. Delete 
 
+router.post("/:hikeID/delete", deleteHike)
 
 
 

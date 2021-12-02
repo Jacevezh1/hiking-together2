@@ -16,7 +16,13 @@
   
 <form style="color: blue; margin-left:4%; margin-bottom:1%" method="POST">
         <a href="/hikes/edit/{{this.getTheHike._id}}" class="btn btn-primary"> Editar </a>
-      </form>
+ </form>
+ {{!-- <form style="color: rgb(189, 10, 10); margin-left:4%; margin-bottom:1%" method="POST">
+        <a href="/hikes/edit/{{this.getTheHike._id}}" class="btn btn-primary"> Delete </a>
+ </form> --}}
+ <form method="POST" action="/hikes/delete/{{this.getTheHike._id}}">
+			<button>Borrar</button>
+	</form>
 </div>
 {{else}}
 <h1>Single Hike</h1>
@@ -34,3 +40,4 @@
   </div>
   {{/if}}
 {{/with}}
+

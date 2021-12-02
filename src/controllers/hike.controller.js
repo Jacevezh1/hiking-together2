@@ -139,3 +139,19 @@ exports.editHike = async(req, res) => {
 
 
 // d) Delete 
+
+exports.deleteHike = async (req, res) => {
+
+	// Identificar el libro que quiero borrar
+	const hikeID = req.params.hikeID
+
+	// Borrado en base de datos
+	const deletedHike = await Hike.findByIdAndDelete(hikeID)
+
+	console.log(deletedHike)
+
+	// Redireccion
+	res.redirect("/hikes")
+
+
+}
