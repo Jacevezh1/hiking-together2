@@ -25,13 +25,8 @@
   <label for="exampleFormControlTextarea1" class="form-label">URL de imagen</label>
   <textarea name="imageUrl" class="form-control" rows="2">{{data.imageUrl}}</textarea>
 </div>
-
             <button id="button-login" class="w-100 btn btn-lg btn-warning" type="submit">Editar</button>
             <p class="mt-5 mb-3 text-muted">© 2021</p>
-
-            <button id="button-login" class="w-100 btn btn-lg btn-danger" action="/hikes/delete/{{this._id}}" type="submit" method="post">Borrar</button>
-            <p class="mt-5 mb-3 text-muted">© 2021</p>
-
             {{#if msg}}
             <p class="text-red-400"> {{msg}} </p>
             {{/if}}
