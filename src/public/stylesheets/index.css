@@ -379,7 +379,7 @@
 
   margin-right: 0.2rem;
   margin-left: 0.2rem;
-
+  font-weight:bold;
 
 }
 
@@ -389,3 +389,74 @@
   border-bottom-color: rgb(235, 205, 41);
   
 }
+
+
+
+
+.chat-titles{
+
+  color: black;
+
+
+}
+
+
+
+
+/* PENDIENTE VERIFICAR SI NO AFECTA OTROS ESTILOS (ESTO LO APLIQUE PARA EL EXTRA DE HOME) */
+
+
+hr:not([size]) {
+  height: 1px;
+}
+
+.featurette-divider {
+  margin: 5rem 0;
+}
+
+
+hr {
+  margin: 1rem 0;
+  color: inherit;
+  background-color: currentColor;
+  border: 0;
+  opacity: .25;
+}
+
+.row {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+  box-sizing: border-box;
+}
+
+
+#title-places-extra{
+
+  font-size:xx-large;
+  color: rgb(87, 143, 207);
+  margin-top: 2rem;
+  font-weight: bolder;
+  
+}
+
+
+
+.title-extra-card{
+
+
+  margin-bottom: 2.5rem;
+
+}
+
+
+
+.img-card-extra {
+
+  border-radius: 2rem;
+
+}
+

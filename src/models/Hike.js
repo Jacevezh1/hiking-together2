@@ -13,7 +13,8 @@ const hikeSchema = new Schema({
         type: String
     },
     location: String,
-    time: String
+    time: String, 
+    contact: String
 }, {timestamps: true})
 
 

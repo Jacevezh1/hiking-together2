@@ -126,7 +126,7 @@ exports.postLogin = async(req, res) => {
         // Si no se encuentra el usuario en DB, renderiza usuario no encontrado
         if(!findUser) {
             return res.render('auth/login', {
-                msg: 'User not Found, ayuda'
+                msg: 'Surgio un problema con tu login, intenta de nuevo'
             })
             
         }
@@ -139,7 +139,7 @@ exports.postLogin = async(req, res) => {
         // Si no encuentra el password nos returna en error de password incorrecto
         if(!checkedPassword){
             return res.render('auth/login', {
-                msg: 'Invalid Password'
+                msg: 'Surgio un problema con tu login, intenta de nuevo'
             })
         }
 

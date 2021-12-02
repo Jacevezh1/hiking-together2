@@ -32,9 +32,24 @@
   </div>
   <div class="card-footer">
     <form method="POST">
-        <a href="/hikes/" class="btn btn-secondary"> Go back </a>
-      </form>
+      <a href="/hikes/" class="btn btn-secondary"> Go back </a>
+    </form>
+  </div>
+</div> {{!-- hola --}}
+  <button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
+    aria-controls="offcanvasBottom">Contact me</button>
+
+  <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div style="color: black;" class="offcanvas-body small">
+      <p style="text-align: center;">Heyyy here is my contact: <strong>{{this.contact}}</strong>, please contact as soon as possible so we can arrange something up, and enjoy a good hike!!</p> 
+    </div>
   </div>
   {{/if}}
 {{/with}}
+
+
 
