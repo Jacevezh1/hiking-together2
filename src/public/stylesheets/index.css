@@ -346,8 +346,8 @@
   margin: 4rem;
   padding-top: 2rem;
   padding-bottom: 3rem;
+}
 
-=======
 .index img {
   object-fit: none; /* Do not scale the image */
   object-position: center; /* Center the image within the element */
@@ -357,12 +357,16 @@
 }
 
 #profile {
-  background-color: #4F97A3
+  background-color: #4F97A3;
+  z-index: 21;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #navbar {
   z-index: 30;
-  position: relative
+  position: relative;
+
 }
 
 #navbar2 {
