@@ -24,6 +24,9 @@
       </div>
 
       <button id="button-login" class="w-100 btn btn-lg btn-warning" type="submit">Editar</button>
+            <form method="POST">
+        <a href="/user/delete/{{this.getTheUser._id}}" class="btn btn-lg btn-danger w-100" style="margin-top: 5%;"> Borrar </a>
+      </form>
       <p class="mt-5 mb-3 text-muted">© 2021</p>
       {{#if msg}}
       <p class="text-red-400"> {{msg}} </p>

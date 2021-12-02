@@ -45,7 +45,7 @@ exports.editUser = async(req, res) => {
 	console.log(updatedUser)
 
 	// Al actulizarlo me manda a la pagina ya con el libro actualizado en particular
-	res.redirect('/')
+	res.redirect(`/user/${updatedUser._id}`)
 
 }
 
