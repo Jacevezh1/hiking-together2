@@ -8,6 +8,9 @@ const { getProfile, viewEditUser, editUser } = require('./../controllers/user.co
 
 
 router.get('/:user', getProfile)
+// 3. Edit (user)
+router.get("/edit/:userID", viewEditUser) 
+router.post("/edit/:userID", editUser)
 
 
 

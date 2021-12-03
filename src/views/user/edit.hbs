@@ -12,9 +12,9 @@
       </div>
 
       <button id="button-login" class="w-100 btn btn-lg btn-warning" type="submit">Editar</button>
-    
-    <form method="post" action="/user/delete/{{this.getTheUser._id}}">
-        <button class="btn btn-lg btn-danger w-100" style="margin-top: 5%;"> Borrar perfil </button>
+
+            <form method="POST" action="/user/delete/{{this.getTheUser._id}}">
+        <button class="btn btn-lg btn-danger w-100" style="margin-top: 5%;"> Borrar perfil</button>
       </form>
       <p class="mt-5 mb-3 text-muted">© 2021</p>
       {{#if msg}}
@@ -23,16 +23,4 @@
     </form>
   </main>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
