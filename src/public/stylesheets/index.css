@@ -460,3 +460,15 @@ hr {
 .top-50 {
   top: 60%!important;
 }
+
+.btn-danger {
+  background-color: #E46E06;
+}
+
+.btn-secondary {
+  background-color: #1EC3CA;
+}
+
+.btn-primary {
+  background-color: #00538C;
+}
