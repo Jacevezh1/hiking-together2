@@ -1,6 +1,6 @@
 {{#with data}}
 {{#if owner}}
-<h1 style="text-align:center;">Single Hike</h1>
+<h1 style="text-align:center;">Este Hike</h1>
 <div class="card mb-3">
   <img src="{{this.getTheHike.imageUrl}}" class="card-img-top" alt="...">
   <div class="card-body" style="background-color: #00538C;">
@@ -10,7 +10,7 @@
   </div>
   <div class="card-footer d-flex flex-row justify-content-around" style="background-color: #00538C;">
     <form method="POST">
-      <a href="/hikes/" class="btn btn-secondary"> Go back </a>
+      <a href="/hikes/" class="btn btn-secondary"> Regresa </a>
     </form>
     <form method="POST">
       <a href="/hikes/edit/{{this.getTheHike._id}}" class="btn btn-warning"> Editar </a>
@@ -21,7 +21,7 @@
   </div>
 </div>
 {{else}}
-<h1 style="text-align:center;">Single Hike</h1>
+<h1 style="text-align:center;">Este Hike</h1>
 <div class="card mb-3">
   <img src="{{this.imageUrl}}" class="card-img-top" alt="...">
   <div class="card-body">
@@ -31,7 +31,7 @@
   </div>
   <div class="card-footer">
     <form method="POST">
-      <a href="/hikes/" class="btn btn-secondary"> Go back </a>
+      <a href="/hikes/" class="btn btn-secondary"> Regresar </a>
     </form>
   </div>
   <div class="card-footer">

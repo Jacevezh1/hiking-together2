@@ -1,14 +1,9 @@
-
 const User = require('./../models/User')
-
 
 
 exports.getProfile = (req, res) => {
     res.render('user/profile')
 }
-
-
-// Edit 
 
 
 exports.viewEditUser = async (req, res) => {
@@ -21,6 +16,8 @@ exports.viewEditUser = async (req, res) => {
 		data: getTheUser
 	})
 }
+
+
 
 
 exports.editUser = async(req, res) => {
@@ -45,9 +42,11 @@ exports.editUser = async(req, res) => {
 	console.log(updatedUser)
 
 	// Al actulizarlo me manda a la pagina ya con el libro actualizado en particular
-	res.redirect(`/user/${updatedUser._id}`) 
-   
+	res.redirect(`/user/${updatedUser._id}`)
+
 }
+
+
 
 
 
