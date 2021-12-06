@@ -1,7 +1,6 @@
 {{#with data}}
 {{#if owner}}
-<h1 style="text-align:center;">Single Hike</h1>
-<div class="card mb-3">
+<div class="card mb-3 border-0" style="margin-top: 15%;">
   <img src="{{this.getTheHike.imageUrl}}" class="card-img-top" alt="...">
   <div class="card-body" style="background-color: #00538C;">
     <h5 id="time-location-single" class="card-title text-warning">{{this.getTheHike.location}}</h5>
@@ -10,19 +9,18 @@
   </div>
   <div class="card-footer d-flex flex-row justify-content-around" style="background-color: #00538C;">
     <form method="POST">
-      <a href="/hikes/" class="btn btn-secondary"> Go back </a>
+      <a href="/hikes/" class="btn btn-secondary text-dark"> Regresar </a>
     </form>
     <form method="POST">
-      <a href="/hikes/edit/{{this.getTheHike._id}}" class="btn btn-warning"> Editar </a>
+      <a href="/hikes/edit/{{this.getTheHike._id}}" class="btn btn-warning text-dark"> Editar </a>
     </form>
     <form method="POST" action="/hikes/delete/{{this.getTheHike._id}}">
-      <button class="btn btn-danger"> Borrar </button>
+      <button class="btn btn-danger text-dark"> Borrar </button>
     </form>
   </div>
 </div>
 {{else}}
-<h1 style="text-align:center;">Single Hike</h1>
-<div class="card mb-3">
+<div class="card mb-3 border-0" style="margin-top: 15%;">
   <img src="{{this.imageUrl}}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 id="time-location-single" class="card-title">{{this.location}}</h5>
@@ -31,10 +29,10 @@
   </div>
   <div class="card-footer">
     <form method="POST">
-      <a href="/hikes/" class="btn btn-secondary"> Go back </a>
+      <a href="/hikes/" class="btn btn-secondary text-white"> Regresar </a>
     </form>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" style="padding-bottom:($spacer*1.5)">
     <button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
       aria-controls="offcanvasBottom">¡Contáctame!</button>
     <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">

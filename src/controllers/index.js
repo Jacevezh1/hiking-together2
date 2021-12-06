@@ -16,5 +16,3 @@ exports.faqs =  (req,res) => {
 exports.extra =  (req,res) => {
     res.render('extra')
 }
-
-

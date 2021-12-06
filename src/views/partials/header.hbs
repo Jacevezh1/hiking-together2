@@ -1,29 +1,27 @@
 
 {{#if currentUser}}
-<nav class="navbar navbar-light" style="background-color: #4783ad; fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #079798;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="">Hiking Together</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+    <a class="navbar-brand text-white" href="/hikes">Hiking Together</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="collapse navbar-collapse" id="navbarText">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Hiking Together</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/user/{{currentUser.name}}">Mi perfil</a>
+            <a class="nav-link active text-white" aria-current="page" href="/user/{{currentUser.name}}">Mi perfil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/hikes">Hikes</a>
+            <a class="nav-link text-white" href="/hikes">Hikes</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="/hikes/crear">Crea tu Hike</a>
+            <a class="nav-link text-white" href="/hikes/crear">Crea tu Hike</a>
           </li>
-        <form class="d-flex" style="color: brown;" action="/auth/logout" method="POST">
-        <button type="submit" class="btn btn-warning">Log Out</button>
+        <form class="d-flex" action="/auth/logout" method="POST">
+        <button type="submit" class="btn btn-primary">Cerrar sesión</button>
         </form>
       </div>
     </div>
@@ -32,23 +30,21 @@
 {{else}}
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #4783ad;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">Hiking Together</a>
+    <a class="navbar-brand text-white" href="/">Hiking Together</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link active text-white" href="/about">Acerca de</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/about">About</a>
+          <a class="nav-link active text-white" href="/faqs">FAQs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/faqs">FAQs</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="/extra">Lugares</a>
+          <a class="nav-link active text-white" href="/extra">Lugares</a>
         </li>
       </ul>
     </div>
